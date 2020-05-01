@@ -20,7 +20,7 @@ class NotelineNbOp(ContainerOp):
 
     noteline_notebook_obj = noteline_notebook.get_noteline_notebook(notebook_in)
     env = noteline_notebook_obj.get_env()
-    if env["type"] == envs.DOCKER_ENV_TYPE:
+    if env.get("type", "") == envs.DOCKER_ENV_TYPE:
       if image:
         print("looks like both input env ({}) provided and env from"
               " notebook({}). Using env provided explicitly".format(image,

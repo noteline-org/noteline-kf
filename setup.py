@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="noteline-kf",
-  version="0.2.1",
+  version="0.2.3",
   author="Viacheslav Kovalevskyi",
   author_email="viacheslav@kovalevskyi.com",
   description="Noteline Kubeflow Pipeline step for executing Notebook",
