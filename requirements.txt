@@ -1,2 +1,3 @@
 kfp
-noteline-sdk
+noteline-sdk-core>=2.2
+smart-open
