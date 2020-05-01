@@ -9,6 +9,7 @@ class NotelineNbOp(ContainerOp):
     def __init__(self,
                  notebook_in: str,
                  notebook_out: str = None,
+                 op_name: str = None,
                  image: str = None,
                  **kwargs):
         if not notebook_in:
@@ -23,6 +24,9 @@ class NotelineNbOp(ContainerOp):
           raise ValueError(
               "image should be set as input variable, and not via kwargs")
 
+        if not op_name:
+          op_name = notebook_in
+
         if "command" in kwargs:
           raise ValueError("command should NOT be passed in kwargs")
         if "arguments" in kwargs:
@@ -33,4 +37,4 @@ class NotelineNbOp(ContainerOp):
         kwargs["arguments"] = ["--input-notebook", notebook_in,
                                "--output-notebook", notebook_out]
 
-        super().__init__(**kwargs)
+        super().__init__(name=op_name, **kwargs)
