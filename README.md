@@ -2,7 +2,7 @@
 
 Kubeflow operator for scheduling Notebooks on KF-Pipeline
 
-# Requirenments
+# Requirements
 
 This step is compatible with eihter [GCP Deep Learning Containers](https://cloud.google.com/ai-platform/deep-learning-containers) or with any containers that are build on top of them. It can NOT be used with just random base containers.
 
